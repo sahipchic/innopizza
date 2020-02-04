@@ -160,7 +160,7 @@
   </li>
   <li>
       <div style=" padding-top: 5px; margin-left: 500px; margin-right: 20px;">
-      <a href="https://bestproger.ru/innopizza/admin.php">
+      <a href="https://innopizza1.herokuapp.com/admin.php">
       <button  style="height: 30px;padding-top: 4px;" class="btn btn-success">Обновить</button>
       </a>
       </div>
