@@ -128,7 +128,7 @@ if (!$is_admin) {
         </li>
         <li>
             <div style="padding-top: 5px; padding-left: 20px;">
-                <a href="https://bestproger.ru/innopizza/admin.php?exit=1">
+                <a href="https://innopizza1.herokuapp.com/admin.php?exit=1">
                     <button style="height: 30px; padding-top: 4px;" class="btn btn-danger">Выйти</button>
                 </a>
             </div>
