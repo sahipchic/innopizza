@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST)){
+if (isset($_POST)) {
     $name = $_POST['name'];
     $city = $_POST['city'];
     $message = $_POST['message'];
@@ -8,6 +8,8 @@ if(isset($_POST)){
 
     $mysqli->query("INSERT INTO `areviews`(`name`, `city`, `review`, `rtime`, `status`) VALUES ('$name', '$city', '$message', NOW(), 'waiting')");
     $id = $mysqli->insert_id;
-    echo $id;
+    echo 'Ваш отзыв был успешно добавлен на модерацию!';
 }
-else echo "error";
+else {
+    throw new RuntimeException("Only for POST method access!");
+}

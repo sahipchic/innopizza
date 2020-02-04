@@ -16,6 +16,13 @@ if(isset($_POST)){
     $mysqli->query("INSERT INTO `aorders`(`name`, `phone`, `address`, `city`, `comment`, `cardname`, `cardnumber`, `expmonth`, `expyear`, `cvv`, `order_time`, `status`) 
     VALUES ('$name', '$phone', '$address', '$city', '$comment', '$cardname', '$cardnumber', '$expmonth', '$expyear', '$cvv', NOW(), 'waiting')");
     $id = $mysqli->insert_id;
-    echo 'success';
+    if($id > 0){
+        echo "success";
+    }
+    else{
+        throw new RuntimeException("Insertion error");
+    }
 }
-else echo "error";
+else {
+    throw new RuntimeException("Only for POST method access!");
+}
