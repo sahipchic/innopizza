@@ -10,12 +10,9 @@ if(isset($_POST)){
     $expmonth = $_POST['expmonth'];
     $expyear = $_POST['expyear'];
     $cvv = $_POST['cvv'];
-    $mysqli = new mysqli('remotemysql.com', 'wBMpn2zR3V', 'zxUBDGbtpG', 'wBMpn2zR3V');
-    $mysqli->set_charset("utf8mb4");
-    if(mysqli_connect_errno()){
-        echo "FUCK";
-        exit;
-    }
+
+    require_once 'bd.php';
+
     $mysqli->query("INSERT INTO `aorders`(`name`, `phone`, `address`, `city`, `comment`, `cardname`, `cardnumber`, `expmonth`, `expyear`, `cvv`, `order_time`, `status`) 
     VALUES ('$name', '$phone', '$address', '$city', '$comment', '$cardname', '$cardnumber', '$expmonth', '$expyear', '$cvv', NOW(), 'waiting')");
     $id = $mysqli->insert_id;

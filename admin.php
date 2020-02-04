@@ -34,9 +34,8 @@
     </html>
     ";
 
-    $mysqli = new mysqli('remotemysql.com', 'wBMpn2zR3V', 'zxUBDGbtpG', 'wBMpn2zR3V');
-    $mysqli->set_charset("utf8mb4");
-    
+    require_once 'bd.php';
+
     function login($login, $password) {
         global $mysqli;
         $loginResult = $mysqli->query("SELECT * FROM admin_info WHERE login='$login' AND password='$password'");

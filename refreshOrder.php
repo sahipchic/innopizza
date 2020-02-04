@@ -1,8 +1,9 @@
 <?php
 session_start();
 if(isset($_SESSION['pizzas'])){
-    $mysqli = new mysqli('remotemysql.com', 'wBMpn2zR3V', 'zxUBDGbtpG', 'wBMpn2zR3V');
-    $mysqli->set_charset("utf8mb4");
+
+    require_once 'bd.php';
+
     $out = "";
     $sum_cost = 0;
     $pids = $_SESSION['pizzas'];
@@ -25,7 +26,6 @@ if(isset($_SESSION['pizzas'])){
     $out .= "<p class=\"dropdown-item\">Итог: $sum_cost руб</p>";
     $out .= "<a class=\"dropdown-item\" onclick=\"clearCart(); location.reload();\">Очистить корзину</a>";
     echo $out;
-    //echo json_encode($_SESSION['pizzas']);
 }
 else{
     echo "SESSION NOT SET";

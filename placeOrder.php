@@ -1,7 +1,7 @@
 <?php
     session_start();
-    $mysqli = new mysqli('remotemysql.com', 'wBMpn2zR3V', 'zxUBDGbtpG', 'wBMpn2zR3V');
-    $mysqli->set_charset("utf8mb4");
+
+    require_once 'bd.php';
     
     function getRowById($id){
         global $mysqli;
