@@ -43,7 +43,6 @@ function getActiveReviews() {
 
     <script>
         function addToCart(pizzaid) {
-            //console.log('pizzaId: ' + pizzaId);
             jQuery.ajax({
                 url: 'addTmpPizza.php',
                 dataType: 'json',
@@ -51,12 +50,9 @@ function getActiveReviews() {
                 contentType: 'application/json',
                 data: JSON.stringify({"pizzaId": pizzaid}),
                 success: function (response) {
-                    //document.getElementById("form_order").innerHTML = "ОФОРМИТЬ ЗАКАЗ()";
-
                     alert("Товар добавлен в корзину!");
                 },
                 error: function (answer) {
-                    //document.getElementById("form_order").innerHTML = "ОФОРМИТЬ ЗАКАЗ()";
                     alert(answer.responseText);
                 }
             });
@@ -70,26 +66,21 @@ function getActiveReviews() {
                 alert(data);
             });
         }
-        
-    </script>
 
+    </script>
     <script>
         function refreshOrder() {
             jQuery.ajax({
                 url: 'refreshOrder.php',
                 success: function (response) {
                     document.getElementById("dropdown_menu").innerHTML = response;
-                    //alert(response);
-
                 },
                 error: function (answer) {
-                    //document.getElementById("form_order").innerHTML = "ОФОРМИТЬ ЗАКАЗ()";
                     alert("error: " + answer.responseText);
                 }
             });
         }
     </script>
-
     <script>
         function clearCart() {
             jQuery.ajax({
@@ -99,7 +90,6 @@ function getActiveReviews() {
                     alert(response);
                 },
                 error: function (answer) {
-                    //document.getElementById("form_order").innerHTML = "ОФОРМИТЬ ЗАКАЗ()";
                     alert("error: " + answer.responseText);
                 }
             });
@@ -170,12 +160,11 @@ function getActiveReviews() {
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img height="800" class="d-block w-100" src="img/pizza.jpg" alt="Первый слайд">
-                <div style="margin-bottom: 250px;  opacity: 0.8; background: #000; border-radius: 20px;"
+                <div style="margin-bottom: 250px;  opacity: 0.9; background: #000; border-radius: 20px;"
                      class="carousel-caption d-none d-md-block">
                     <h1>Добро пожаловать в InnoPizza!</h1>
                     <h3>
@@ -187,7 +176,7 @@ function getActiveReviews() {
             <div class="carousel-item">
                 <img height="800" class="d-block w-100" src="img/pizza2.jpg" alt="Второй слайд">
                 <div align="left"
-                     style="margin-right: 200px;margin-left: 200px; margin-bottom: 200px; margin-top: 100px; padding-right: 20px; padding-left: 20px; opacity: 0.8; background: #000; border-radius: 20px;"
+                     style="margin: 100px 200px 200px;padding-right: 20px; padding-left: 20px; opacity: 0.8; background: #000; border-radius: 20px;"
                      class="carousel-caption d-none d-md-block">
                     <h3>
                         Оставьте вашу заявку и наш оператор обязательно свяжется с вами в течение нескольких минут
@@ -203,13 +192,16 @@ function getActiveReviews() {
                         <div class="form-group row">
                             <label for="phone" class="col-sm-2 col-form-label">Телефон</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="input_phone" name="phone" placeholder="Телефон">
+                                <input type="text" class="form-control" id="input_phone" name="phone"
+                                       placeholder="Телефон">
                             </div>
                         </div>
                         <br>
                         <div class="form-group row">
                             <div align="center" class="col-sm-10">
-                                <button type="reset" class="btn btn-success" onclick="sendAjaxForm(this.form);">Оставить заявку</button>
+                                <button type="reset" class="btn btn-success" onclick="sendAjaxForm(this.form);">Оставить
+                                    заявку
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -275,8 +267,7 @@ function getActiveReviews() {
     </div>
 </section>
 <section id="reviews">
-    <div class="text-center text-light"
-         style="background-image: linear-gradient(to top right, rgb(101, 115, 255), rgb(111, 114, 247), rgb(120, 114, 239), rgb(130, 113, 231), rgb(139, 112, 223), rgb(149, 111, 215), rgb(158, 111, 208), rgb(168, 110, 200), rgb(177, 109, 192), rgb(187, 108, 184), rgb(196, 108, 176), rgb(206, 107, 168));background-color: #f2f2f2;padding: 50px 200px 40px 200px;border: 1px solid lightgrey;border-radius: 3px;">
+    <div class="text-center text-light" style="background: #f2f2f2 linear-gradient(to top right, rgb(101, 115, 255), rgb(111, 114, 247), rgb(120, 114, 239), rgb(130, 113, 231), rgb(139, 112, 223), rgb(149, 111, 215), rgb(158, 111, 208), rgb(168, 110, 200), rgb(177, 109, 192), rgb(187, 108, 184), rgb(196, 108, 176), rgb(206, 107, 168));padding: 50px 200px 40px 200px;border: 1px solid lightgrey;border-radius: 3px;">
         <div class="customer-reviews pb-4">
             <h2>Что наши клиенты говорят об InnoPizza?</h2>
         </div>
@@ -292,7 +283,8 @@ function getActiveReviews() {
                     $city = $row['city'];
                     if ($i == 0) {
                         $out .= "<div class=\"carousel-item active\">";
-                    } else {
+                    }
+                    else {
                         $out .= "<div class=\"carousel-item\">";
                     }
                     $out .= "<h3>Имя: $name</h3>
