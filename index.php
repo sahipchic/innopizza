@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['pizzas'])) {
     $_SESSION['pizzas'] = array();
 }
-$mysqli = new mysqli('localhost', 'jlysmlhb_user', 'ertHi98..DE1', 'jlysmlhb_db');
+$mysqli = new mysqli('remotemysql.com', 'wBMpn2zR3V', 'zxUBDGbtpG', 'wBMpn2zR3V');
 $mysqli->set_charset("utf8mb4");
 
 function getRowById($id) {

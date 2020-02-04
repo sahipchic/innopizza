@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['pizzas'])){
-    $mysqli = new mysqli('localhost', 'jlysmlhb_user', 'ertHi98..DE1', 'jlysmlhb_db');
+    $mysqli = new mysqli('remotemysql.com', 'wBMpn2zR3V', 'zxUBDGbtpG', 'wBMpn2zR3V');
     $mysqli->set_charset("utf8mb4");
     $out = "";
     $sum_cost = 0;

