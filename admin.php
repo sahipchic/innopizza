@@ -20,7 +20,7 @@ $echo = "
             <div id='formContent'>
         
                 <div class='fadeIn first'>
-                    <br><h4>Вход панель управления</h4><br>
+                    <br><h4>Вход в панель управления</h4><br>
                 </div>
                 <form method='post' action='admin.php'>
                     <input type='text' id='login' class='fadeIn second' name='login' placeholder='login'>
