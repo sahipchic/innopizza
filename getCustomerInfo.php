@@ -20,7 +20,8 @@ if(isset($_POST)){
         echo "success";
     }
     else{
-        throw new RuntimeException("Insertion error");
+        echo "error";
+        //throw new RuntimeException("Insertion error");
     }
 }
 else {
