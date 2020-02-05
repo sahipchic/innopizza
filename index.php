@@ -185,14 +185,14 @@ function getActiveReviews() {
                         <div class="form-group row">
                             <label for="name" class="col-sm-2 col-form-label">Name</label>
                             <div class="col">
-                                <input required type="text" class="form-control" id="input_name" name="name" placeholder="Name">
+                                <input type="text" class="form-control" id="input_name" name="name" placeholder="Name" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="phone" class="col-sm-2 col-form-label">Phone</label>
                             <div class="col-sm-10">
-                                <input required type="text" class="form-control" id="input_phone" name="phone"
-                                       placeholder="Phone">
+                                <input type="text" class="form-control" id="input_phone" name="phone"
+                                       placeholder="Phone" required>
                             </div>
                         </div>
                         <br>

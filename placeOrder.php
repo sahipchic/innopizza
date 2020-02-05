@@ -27,8 +27,14 @@ function getRowById($id) {
             var url = form.getAttribute("action");
             var formData = $(form).serializeArray();
             $.post(url, formData).done(function (data) {
-                if (data === 'success')
+                if (data === 'success'){
                     alert("Your order has been successfully paid for! Our courier will contact you at the specified phone number when he arrives. Expect and Bon appetit!");
+                    clearCart();
+                    window.location.href = 'https://innopizza1.herokuapp.com/index.php';
+                }
+                else{
+                    alert("Enter all required data, please!");
+                }
             });
         }
     </script>
@@ -102,7 +108,7 @@ function getRowById($id) {
                 </div>
 
                 <input type="reset" value="Checkout payment" class="btn"
-                       onclick="sendCustomerInfo(this.form); clearCart(); window.location.href = 'https://innopizza1.herokuapp.com/index.php';" <?php
+                       onclick="sendCustomerInfo(this.form);" <?php
 
                 if (isset($_SESSION['pizzas'])) {
                     if(count($_SESSION['pizzas']) == 0) echo 'disabled';
