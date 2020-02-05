@@ -186,13 +186,13 @@ function getActiveReviews() {
                         <div class="form-group row">
                             <label for="name" class="col-sm-2 col-form-label">Имя</label>
                             <div class="col">
-                                <input type="text" class="form-control" id="input_name" name="name" placeholder="Имя">
+                                <input required type="text" class="form-control" id="input_name" name="name" placeholder="Имя">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="phone" class="col-sm-2 col-form-label">Телефон</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="input_phone" name="phone"
+                                <input required type="text" class="form-control" id="input_phone" name="phone"
                                        placeholder="Телефон">
                             </div>
                         </div>
@@ -324,15 +324,15 @@ function getActiveReviews() {
                 <form class="" action="getReview.php" method="post">
                     <div class="form-group">
                         <label for="Form-Control-Name"><h5>Имя</h5></label>
-                        <input name="name" type="text" class="form-control" id="Form-Control-Name" placeholder="Илья">
+                        <input required name="name" type="text" class="form-control" id="Form-Control-Name" placeholder="Илья">
                     </div>
                     <div class="form-group">
                         <label for="Form-Input-City"><h5>Город</h5></label>
-                        <input name="city" type="text" class="form-control" id="Form-Input-City" placeholder="Москва">
+                        <input required name="city" type="text" class="form-control" id="Form-Input-City" placeholder="Москва">
                     </div>
                     <div class="form-group">
                         <label for="Form-Control-TextArea"><h5>Ваш отзыв</h5></label>
-                        <textarea name="message" class="form-control" id="Form-Control-Message" rows="3"
+                        <textarea required name="message" class="form-control" id="Form-Control-Message" rows="3"
                                   placeholder="Напишите что-нибудь..."></textarea>
                     </div>
                     <input type="button" value="Отправить отзыв" class="btn btn-success "

@@ -64,13 +64,13 @@ function getRowById($id) {
                     <div class="col-50">
                         <h3>Платежный адрес</h3>
                         <label for="fname"><i class="fa fa-user"></i> Полное имя</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Илья Сахипов">
+                        <input required type="text" id="fname" name="firstname" placeholder="Илья Сахипов">
                         <label for="phone"><i class="fa fa-phone"></i> Телефон</label>
-                        <input type="text" id="phone" name="phone" placeholder="+7 (963( 325 82 07">
+                        <input required type="text" id="phone" name="phone" placeholder="+7 (963) 325 82 07">
                         <label for="adr"><i class="fa fa-address-card-o"></i> Адрес</label>
-                        <input type="text" id="adr" name="address" placeholder="Большой проспект П.С. дом 54, кв. 78">
+                        <input required type="text" id="adr" name="address" placeholder="Большой проспект П.С. дом 54, кв. 78">
                         <label for="city"><i class="fa fa-institution"></i> Город</label>
-                        <input type="text" id="city" name="city" placeholder="Санкт-Петербург">
+                        <input required type="text" id="city" name="city" placeholder="Санкт-Петербург">
                         <label for="comment"><i class="fa fa-comments-o"></i> Комментарий</label>
                         <input type="text" id="comment" name="comment" placeholder="Ваш комментарий к заказу...">
                     </div>
@@ -84,19 +84,19 @@ function getRowById($id) {
                             <i class="fa fa-cc-discover" style="color:orange;"></i>
                         </div>
                         <label for="cname">Имя на карте</label>
-                        <input type="text" id="cname" name="cardname" placeholder="ILYA SAKHIPOV">
+                        <input required type="text" id="cname" name="cardname" placeholder="ILYA SAKHIPOV">
                         <label for="ccnum">Номер карты</label>
-                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <input required type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                         <label for="expmonth">Месяц истечения срока действия</label>
-                        <input type="text" id="expmonth" name="expmonth" placeholder="09">
+                        <input required type="text" id="expmonth" name="expmonth" placeholder="09">
                         <div class="row">
                             <div class="col-50">
                                 <label for="expyear">Год истечения</label>
-                                <input type="text" id="expyear" name="expyear" placeholder="2022">
+                                <input required type="text" id="expyear" name="expyear" placeholder="2022">
                             </div>
                             <div class="col-50">
                                 <label for="cvv">CVV</label>
-                                <input type="text" id="cvv" name="cvv" placeholder="352">
+                                <input required type="text" id="cvv" name="cvv" placeholder="352">
                             </div>
                         </div>
                     </div>
