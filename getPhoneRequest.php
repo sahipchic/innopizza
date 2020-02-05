@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST)){
-    if(isset($_POST['name']) && isset($_POST['phone'])) {
+    if($_POST['name'] != '' && $_POST['phone'] != '') {
         $name = $_POST['name'];
         $phone = $_POST['phone'];
 
