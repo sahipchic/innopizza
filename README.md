@@ -53,7 +53,7 @@ Main Page:
 5) `Reviews` is a carousel in which all active reviews from users are rotated.
 6) `Write your own review` is a form where you can write review about the service and send it for admin's moderating
 
-####Framework used for design - `Bootstrap`
+*Framework used for design* - `Bootstrap`
 
 
 
