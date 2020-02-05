@@ -73,7 +73,7 @@ function getRowById($id) {
                         <input type="text" id="comment" name="comment" placeholder="Your comment to the order...">
                     </div>
                     <div class="col-50">
-                        <h3>Оплата</h3>
+                        <h3>Payment</h3>
                         <label for="fname">Accepted cards</label>
                         <div class="icon-container">
                             <i class="fa fa-cc-visa" style="color:navy;"></i>
