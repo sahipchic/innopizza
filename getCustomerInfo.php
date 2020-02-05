@@ -21,7 +21,6 @@ if(isset($_POST)){
     }
     else{
         echo "error";
-        //throw new RuntimeException("Insertion error");
     }
 }
 else {

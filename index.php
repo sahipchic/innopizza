@@ -319,16 +319,16 @@ function getActiveReviews() {
                 <form class="" action="getReview.php" method="post">
                     <div class="form-group">
                         <label for="Form-Control-Name"><h5>Name</h5></label>
-                        <input required name="name" type="text" class="form-control" id="Form-Control-Name" placeholder="Name">
+                        <input name="name" type="text" class="form-control" id="Form-Control-Name" placeholder="Name" required="true">
                     </div>
                     <div class="form-group">
                         <label for="Form-Input-City"><h5>City</h5></label>
-                        <input required name="city" type="text" class="form-control" id="Form-Input-City" placeholder="Moscow">
+                        <input name="city" type="text" class="form-control" id="Form-Input-City" placeholder="Moscow" required="true">
                     </div>
                     <div class="form-group">
                         <label for="Form-Control-TextArea"><h5>Your review</h5></label>
-                        <textarea required name="message" class="form-control" id="Form-Control-Message" rows="3"
-                                  placeholder="Write something..."></textarea>
+                        <textarea name="message" class="form-control" id="Form-Control-Message" rows="3"
+                                  placeholder="Write something..." required="true"></textarea>
                     </div>
                     <input type="button" value="Submit review" class="btn btn-success "
                            onclick="sendAjaxForm(this.form);">
