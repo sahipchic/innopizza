@@ -331,7 +331,8 @@ function getActiveReviews() {
                                   placeholder="Write something..." required="true"></textarea>
                     </div>
                     <input type="button" value="Submit review" class="btn btn-success "
-                           onclick="sendAjaxForm(this.form);">
+                           onclick="sendAjaxForm(this.form);
+                           document.querySelectorAll('input[type=text], textarea').forEach(el=>el.value = '');">
                 </form>
             </div>
         </div>
