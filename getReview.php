@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST)) {
-    if(isset($_POST['name']) && isset($_POST['city']) && isset($_POST['message'])) {
+    if($_POST['name'] != '' && $_POST['city'] != '' && $_POST['message'] != '') {
         $name = $_POST['name'];
         $city = $_POST['city'];
         $message = $_POST['message'];
