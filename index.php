@@ -143,7 +143,7 @@ function getActiveReviews() {
                         $out .= "<p class=\"dropdown-item\">$name &nbsp&nbsp<span class=\"badge badge-dark\"> $cnt </span></p>";
                     }
                     $out .= "<div class=\"dropdown-divider\"></div>";
-                    $out .= "<p class=\"dropdown-item\">Total: $sum_cost руб</p>";
+                    $out .= "<p class=\"dropdown-item\">Total: $sum_cost $</p>";
                     echo $out;
                     ?>
 
