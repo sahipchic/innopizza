@@ -271,8 +271,8 @@ if (!$is_admin) {
 
         <div class="tab-pane fade" id="phone-requests">
             <div class="container">
-                <h2>Waiting requests</h2>
-                <p></p>
+                <h2>Phone requests</h2>
+                <p>These requests must be served and then removed from the list</p>
                 <table class="table table-striped">
                     <thead>
                     <tr>
