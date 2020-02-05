@@ -107,7 +107,7 @@ function getRowById($id) {
 
                 </div>
 
-                <input type="reset" value="Checkout payment" class="btn"
+                <input type="button" value="Checkout payment" class="btn"
                        onclick="sendCustomerInfo(this.form);" <?php
 
                 if (isset($_SESSION['pizzas'])) {
