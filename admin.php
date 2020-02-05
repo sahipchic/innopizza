@@ -23,8 +23,8 @@ $echo = "
                     <br><h4>Log in to the admin panel</h4><br>
                 </div>
                 <form method='post' action='admin.php'>
-                    <input type='text' id='login' class='fadeIn second' name='login' placeholder='login'>
-                    <input type='text' id='password' class='fadeIn third' name='password' placeholder='password'>
+                    <input type='text' id='login' class='fadeIn second' name='login' placeholder='login' required>
+                    <input type='text' id='password' class='fadeIn third' name='password' placeholder='password' required>
                     <input type='submit' class='fadeIn fourth' value='Enter'>
                 </form>
             </div>
