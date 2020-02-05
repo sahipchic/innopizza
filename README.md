@@ -56,6 +56,7 @@ Main Page:
 *Framework used for design* - `Bootstrap`
 
 FrontEnd part - `index.php`, `placeOrder.php`, `admin.php`
+
 BackEnd part - all other `php` files
 
 
