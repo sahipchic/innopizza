@@ -140,7 +140,7 @@ function getRowById($id) {
             ?>
 
             <hr>
-            <p>Итог <span class="price" style="color:black"><b>
+            <p>Total <span class="price" style="color:black"><b>
           <?
           global $sum_cost;
           echo $sum_cost . " $";

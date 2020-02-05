@@ -25,7 +25,7 @@ $echo = "
                 <form method='post' action='admin.php'>
                     <input type='text' id='login' class='fadeIn second' name='login' placeholder='login'>
                     <input type='text' id='password' class='fadeIn third' name='password' placeholder='password'>
-                    <input type='submit' class='fadeIn fourth' value='Войти'>
+                    <input type='submit' class='fadeIn fourth' value='Enter'>
                 </form>
             </div>
         </div>

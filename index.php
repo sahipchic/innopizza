@@ -143,7 +143,7 @@ function getActiveReviews() {
                         $out .= "<p class=\"dropdown-item\">$name &nbsp&nbsp<span class=\"badge badge-dark\"> $cnt </span></p>";
                     }
                     $out .= "<div class=\"dropdown-divider\"></div>";
-                    $out .= "<p class=\"dropdown-item\">Итог: $sum_cost руб</p>";
+                    $out .= "<p class=\"dropdown-item\">Total: $sum_cost руб</p>";
                     echo $out;
                     ?>
 
@@ -168,7 +168,7 @@ function getActiveReviews() {
                      class="carousel-caption d-none d-md-block">
                     <h1>Welcome to InnoPizza!</h1>
                     <h3>
-                        To cook our pizzas, we use only the freshest ingredients and monitor the quality of each cooked pizza!
+                        To cook our pizzas, we use only the freshest ingredients<br> and monitor the quality of each cooked pizza!
                     </h3>
                 </div>
             </div>
