@@ -2,8 +2,8 @@
 session_start();
 if (isset($_SESSION['pizzas'])) {
     $_SESSION['pizzas'] = array();
-    echo "Корзина очищена!";
+    echo "The cart is cleared!";
 }
 else {
-    echo "Ошибка!";
+    echo "Error!";
 }

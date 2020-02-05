@@ -50,7 +50,7 @@ function getActiveReviews() {
                 contentType: 'application/json',
                 data: JSON.stringify({"pizzaId": pizzaid}),
                 success: function (response) {
-                    alert("Товар добавлен в корзину!");
+                    alert("The item is added to cart!");
                 },
                 error: function (answer) {
                     alert(answer.responseText);
@@ -109,19 +109,19 @@ function getActiveReviews() {
     <div style="padding-right: 100px;" class="collapse navbar-collapse" id="navbar-Menu" align="right">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item mr-3 ">
-                <a class="nav-link" href="#menu">МЕНЮ</a>
+                <a class="nav-link" href="#menu">MENU</a>
             </li>
             <li class="nav-item mr-3 ">
-                <a class="nav-link" href="#reviews">ОТЗЫВЫ</a>
+                <a class="nav-link" href="#reviews">REVIEWS</a>
             </li>
             <li class="nav-item mr-3 ">
-                <a id="form_order" class="nav-link" href="placeOrder.php">ОФОРМИТЬ ЗАКАЗ</a>
+                <a id="form_order" class="nav-link" href="placeOrder.php">PLACE ORDER</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" onclick="refreshOrder();" id="navbarDropdown" role="button"
                    data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    КОРЗИНА
+                    CART
                 </a>
                 <div id="dropdown_menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php
@@ -148,7 +148,7 @@ function getActiveReviews() {
                     ?>
 
 
-                    <a class="dropdown-item" onclick="clearCart();">Очистить корзину</a>
+                    <a class="dropdown-item" onclick="clearCart();">Clear cart</a>
                 </div>
             </li>
 
@@ -166,10 +166,9 @@ function getActiveReviews() {
                 <img height="800" class="d-block w-100" src="img/pizza.jpg" alt="Первый слайд">
                 <div style="margin-bottom: 250px;  opacity: 0.9; background: #000; border-radius: 20px;"
                      class="carousel-caption d-none d-md-block">
-                    <h1>Добро пожаловать в InnoPizza!</h1>
+                    <h1>Welcome to InnoPizza!</h1>
                     <h3>
-                        Для приготовления наших пицц мы используем только самые свежие ингридиенты и следим за
-                        качеством каждой приготовленной пиццы!
+                        To cook our pizzas, we use only the freshest ingredients and monitor the quality of each cooked pizza!
                     </h3>
                 </div>
             </div>
@@ -179,28 +178,27 @@ function getActiveReviews() {
                      style="margin: 100px 200px 200px;padding-right: 20px; padding-left: 20px; opacity: 0.8; background: #000; border-radius: 20px;"
                      class="carousel-caption d-none d-md-block">
                     <h3>
-                        Оставьте вашу заявку и наш оператор обязательно свяжется с вами в течение нескольких минут
+                        Leave your request and our operator will contact you within a few minutes
                     </h3>
                     <br><br>
                     <form method="post" action="getPhoneRequest.php">
                         <div class="form-group row">
-                            <label for="name" class="col-sm-2 col-form-label">Имя</label>
+                            <label for="name" class="col-sm-2 col-form-label">Name</label>
                             <div class="col">
-                                <input required type="text" class="form-control" id="input_name" name="name" placeholder="Имя">
+                                <input required type="text" class="form-control" id="input_name" name="name" placeholder="Name">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="phone" class="col-sm-2 col-form-label">Телефон</label>
+                            <label for="phone" class="col-sm-2 col-form-label">Phone</label>
                             <div class="col-sm-10">
                                 <input required type="text" class="form-control" id="input_phone" name="phone"
-                                       placeholder="Телефон">
+                                       placeholder="Phone">
                             </div>
                         </div>
                         <br>
                         <div class="form-group row">
                             <div align="center" class="col-sm-10">
-                                <button type="reset" class="btn btn-success" onclick="sendAjaxForm(this.form);">Оставить
-                                    заявку
+                                <button type="reset" class="btn btn-success" onclick="sendAjaxForm(this.form);">Submit request
                                 </button>
                             </div>
                         </div>
@@ -222,7 +220,7 @@ function getActiveReviews() {
 <section id="menu">
     <div class="container">
         <div align="center">
-            <h1 style="margin-top: 40px;">Меню</h1>
+            <h1 style="margin-top: 40px;">Menu</h1>
         </div>
         <div class="card-group text-center p-5">
             <?php
@@ -269,7 +267,7 @@ function getActiveReviews() {
 <section id="reviews">
     <div class="text-center text-light" style="background: #f2f2f2 linear-gradient(to top right, rgb(101, 115, 255), rgb(111, 114, 247), rgb(120, 114, 239), rgb(130, 113, 231), rgb(139, 112, 223), rgb(149, 111, 215), rgb(158, 111, 208), rgb(168, 110, 200), rgb(177, 109, 192), rgb(187, 108, 184), rgb(196, 108, 176), rgb(206, 107, 168));padding: 50px 200px 40px 200px;border: 1px solid lightgrey;border-radius: 3px;">
         <div class="customer-reviews pb-4">
-            <h2>Что наши клиенты говорят об InnoPizza?</h2>
+            <h2>What do our customers say about InnoPizza?</h2>
         </div>
         <div class="carousel slide" data-ride="carousel" id="review-carousel" data-interval="4000">
             <div class="carousel-inner review-inner" role="listbox">
@@ -287,9 +285,9 @@ function getActiveReviews() {
                     else {
                         $out .= "<div class=\"carousel-item\">";
                     }
-                    $out .= "<h3>Имя: $name</h3>
+                    $out .= "<h3>Name: $name</h3>
                     <p><em>$review</em></p>
-                    <p><strong>Город: $city</strong></p>
+                    <p><strong>City: $city</strong></p>
                             </div>";
                     $i++;
 
@@ -313,29 +311,26 @@ function getActiveReviews() {
     <div style="background-color: #f2f2f2;padding: 50px 20px 15px 120px;border: 1px solid lightgrey;border-radius: 3px;">
         <div class="row text-dark">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center text-dark">
-                <h2>Оставьте свой собственный отзыв!</h2><br>
-                <p>Наша компания с каждым днем стремится стать все лучше и лучше, и в этом нам нужна ваша поддержка!<br><br>Пожалуйста,
-                    если у вас есть какие то советы или предложения по работе нашего сервиса, или вы просто хотите
-                    оставить отзыв по поводу качества приготовленной пиццы либо качества обслуживания, просто заполните
-                    форму, и мы обязательно прочитаем то, что вы нам отправили!</p><br>
-                <h3><font color="#fc0808">Только вы делаете нас лучше ♥♥♥️</font></h3>
+                <h2>Leave your own review!</h2><br>
+                <p>Our company strives to become better and better every day, <br>and we need your support in this! <br>Please, if you have any tips or suggestions about our service, <bt>or you just want to leave a review about the quality of cooked pizza or the quality of service, just fill out the form, <br>and we will definitely read what you sent us!</p><br>
+                <h3><font color="#fc0808">Only you make us better ♥♥♥️</font></h3>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <form class="" action="getReview.php" method="post">
                     <div class="form-group">
-                        <label for="Form-Control-Name"><h5>Имя</h5></label>
-                        <input required name="name" type="text" class="form-control" id="Form-Control-Name" placeholder="Илья">
+                        <label for="Form-Control-Name"><h5>Name</h5></label>
+                        <input required name="name" type="text" class="form-control" id="Form-Control-Name" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <label for="Form-Input-City"><h5>Город</h5></label>
-                        <input required name="city" type="text" class="form-control" id="Form-Input-City" placeholder="Москва">
+                        <label for="Form-Input-City"><h5>City</h5></label>
+                        <input required name="city" type="text" class="form-control" id="Form-Input-City" placeholder="Moscow">
                     </div>
                     <div class="form-group">
-                        <label for="Form-Control-TextArea"><h5>Ваш отзыв</h5></label>
+                        <label for="Form-Control-TextArea"><h5>Your review</h5></label>
                         <textarea required name="message" class="form-control" id="Form-Control-Message" rows="3"
-                                  placeholder="Напишите что-нибудь..."></textarea>
+                                  placeholder="Write something..."></textarea>
                     </div>
-                    <input type="button" value="Отправить отзыв" class="btn btn-success "
+                    <input type="button" value="Submit review" class="btn btn-success "
                            onclick="sendAjaxForm(this.form);">
                 </form>
             </div>

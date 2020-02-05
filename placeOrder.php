@@ -28,7 +28,7 @@ function getRowById($id) {
             var formData = $(form).serializeArray();
             $.post(url, formData).done(function (data) {
                 if (data === 'success')
-                    alert("Ваш заказ успешно оплачен! Наш курьер свяжется с вами по указанному телефону, когда будет подъезжать. Ожидайте и приятного аппетита!");
+                    alert("Your order has been successfully paid for! Our courier will contact you at the specified phone number when he arrives. Expect and Bon appetit!");
             });
         }
     </script>
@@ -48,12 +48,10 @@ function getRowById($id) {
 <body>
 
 <div align="center" style="color: white;">
-    <h1>Оформление заказа</h1>
+    <h1>Order registration</h1>
 </div>
 <div style="color: white; padding-left: 100px; padding-right: 100px; padding-top: 10px; padding-bottom: 30px;">
-    <p>Для того, чтобы оформить заказ, пожалуйста, заполните все данные ниже и удостоверьтесь, что введенная вами
-        информация совпадает с реальной, так как вами данные будут обрабатываться банком, и в противном случае
-        транзакция может не пройти.
+    <p>In order to place an order, please fill in all the data below and make sure that the information you entered is the same as the real one, since your data will be processed by the Bank, and otherwise the transaction may not pass.
     </p>
 </div>
 <div class="row">
@@ -62,36 +60,36 @@ function getRowById($id) {
             <form action="getCustomerInfo.php" method="post">
                 <div class="row">
                     <div class="col-50">
-                        <h3>Платежный адрес</h3>
-                        <label for="fname"><i class="fa fa-user"></i> Полное имя</label>
-                        <input required type="text" id="fname" name="firstname" placeholder="Илья Сахипов">
-                        <label for="phone"><i class="fa fa-phone"></i> Телефон</label>
+                        <h3>Billing address</h3>
+                        <label for="fname"><i class="fa fa-user"></i> Full name</label>
+                        <input required type="text" id="fname" name="firstname" placeholder="Ilya Sakhipov">
+                        <label for="phone"><i class="fa fa-phone"></i> Phone</label>
                         <input required type="text" id="phone" name="phone" placeholder="+7 (963) 325 82 07">
-                        <label for="adr"><i class="fa fa-address-card-o"></i> Адрес</label>
-                        <input required type="text" id="adr" name="address" placeholder="Большой проспект П.С. дом 54, кв. 78">
-                        <label for="city"><i class="fa fa-institution"></i> Город</label>
-                        <input required type="text" id="city" name="city" placeholder="Санкт-Петербург">
-                        <label for="comment"><i class="fa fa-comments-o"></i> Комментарий</label>
-                        <input type="text" id="comment" name="comment" placeholder="Ваш комментарий к заказу...">
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <input required type="text" id="adr" name="address" placeholder="Bolshoy Prospekt P. S. house 54, 78 sq.">
+                        <label for="city"><i class="fa fa-institution"></i> City</label>
+                        <input required type="text" id="city" name="city" placeholder="Saint-Petersburg">
+                        <label for="comment"><i class="fa fa-comments-o"></i> Comment</label>
+                        <input type="text" id="comment" name="comment" placeholder="Your comment to the order...">
                     </div>
                     <div class="col-50">
                         <h3>Оплата</h3>
-                        <label for="fname">Принимаемые карты</label>
+                        <label for="fname">Accepted cards</label>
                         <div class="icon-container">
                             <i class="fa fa-cc-visa" style="color:navy;"></i>
                             <i class="fa fa-cc-amex" style="color:blue;"></i>
                             <i class="fa fa-cc-mastercard" style="color:red;"></i>
                             <i class="fa fa-cc-discover" style="color:orange;"></i>
                         </div>
-                        <label for="cname">Имя на карте</label>
+                        <label for="cname">Name on the card</label>
                         <input required type="text" id="cname" name="cardname" placeholder="ILYA SAKHIPOV">
-                        <label for="ccnum">Номер карты</label>
-                        <input required type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                        <label for="expmonth">Месяц истечения срока действия</label>
+                        <label for="ccnum">Number of the card</label>
+                        <input required type="text" id="ccnum" name="cardnumber" placeholder="1111 2222 3333 4444">
+                        <label for="expmonth">Exp month</label>
                         <input required type="text" id="expmonth" name="expmonth" placeholder="09">
                         <div class="row">
                             <div class="col-50">
-                                <label for="expyear">Год истечения</label>
+                                <label for="expyear">Exp year</label>
                                 <input required type="text" id="expyear" name="expyear" placeholder="2022">
                             </div>
                             <div class="col-50">
@@ -103,7 +101,7 @@ function getRowById($id) {
 
                 </div>
 
-                <input type="reset" value="Продолжить оплату" class="btn"
+                <input type="reset" value="Checkout payment" class="btn"
                        onclick="sendCustomerInfo(this.form); clearCart(); window.location.href = 'https://innopizza1.herokuapp.com/index.php';" <?php
 
                 if (isset($_SESSION['pizzas'])) {
@@ -116,7 +114,7 @@ function getRowById($id) {
     </div>
     <div class="col-25">
         <div class="container">
-            <h4>Корзина <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i>
+            <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i>
         <b>
           <?
           if (isset($_SESSION['pizzas'])) {
@@ -135,7 +133,7 @@ function getRowById($id) {
                     $name = $row[2];
                     $cost = $row[4];
                     $sum_cost += $cost;
-                    $out .= "<p>$name<span class=\"price\">$cost ₽</span></p>";
+                    $out .= "<p>$name<span class=\"price\">$cost $</span></p>";
                 }
                 echo $out;
             }
@@ -145,7 +143,7 @@ function getRowById($id) {
             <p>Итог <span class="price" style="color:black"><b>
           <?
           global $sum_cost;
-          echo $sum_cost . " ₽";
+          echo $sum_cost . " $";
           ?>
           </b></span></p>
         </div>

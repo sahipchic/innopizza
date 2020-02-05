@@ -20,7 +20,7 @@ $echo = "
             <div id='formContent'>
         
                 <div class='fadeIn first'>
-                    <br><h4>Вход в панель управления</h4><br>
+                    <br><h4>Log in to the admin panel</h4><br>
                 </div>
                 <form method='post' action='admin.php'>
                     <input type='text' id='login' class='fadeIn second' name='login' placeholder='login'>
@@ -79,11 +79,11 @@ if (!$is_admin) {
                 data: JSON.stringify({"id": id, "action": action}),
                 success: function (response) {
                     if (response.responseText === "success") {
-                        alert("Успешно!");
+                        alert("Successful!");
                         location.reload();
                     }
                     else if (response.responseText === "error") {
-                        alert("Ошибка! Перезагрузите страницу и повторите попытку.");
+                        alert("Error! Reload the page and try again.");
                     }
                     else {
                         alert(response.responseText);
@@ -91,11 +91,11 @@ if (!$is_admin) {
                 },
                 error: function (response) {
                     if (response.responseText === "success") {
-                        alert("Успешно!");
+                        alert("Successful!");
                         location.reload();
                     }
                     else if (response.responseText === "error") {
-                        alert("Ошибка! Перезагрузите страницу и повторите попытку.");
+                        alert("Error! Reload the page and try again.");
                     }
                     else {
                         alert(response.responseText);
@@ -108,28 +108,28 @@ if (!$is_admin) {
 <body>
     <ul class="nav nav-tabs">
         <li class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#history">История заказов</a>
+            <a class="nav-link" data-toggle="tab" href="#history">History</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#waiting-reviews">Отзывы в ожидании</a>
+            <a class="nav-link" data-toggle="tab" href="#waiting-reviews">Waiting reviews</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#active-reviews">Активные отзывы</a>
+            <a class="nav-link" data-toggle="tab" href="#active-reviews">Active reviews</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#phone-requests">Заявки на созвон</a>
+            <a class="nav-link" data-toggle="tab" href="#phone-requests">Phone requests</a>
         </li>
         <li>
             <div style=" padding-top: 5px; margin-left: 500px; margin-right: 20px;">
                 <a href="https://innopizza1.herokuapp.com/admin.php">
-                    <button style="height: 30px;padding-top: 4px;" class="btn btn-success">Обновить</button>
+                    <button style="height: 30px;padding-top: 4px;" class="btn btn-success">Reload</button>
                 </a>
             </div>
         </li>
         <li>
             <div style="padding-top: 5px; padding-left: 20px;">
                 <a href="https://innopizza1.herokuapp.com/admin.php?exit=1">
-                    <button style="height: 30px; padding-top: 4px;" class="btn btn-danger">Выйти</button>
+                    <button style="height: 30px; padding-top: 4px;" class="btn btn-danger">Exit</button>
                 </a>
             </div>
         </li>
@@ -137,8 +137,8 @@ if (!$is_admin) {
     <div class="tab-content">
         <div class="tab-pane active" id="history">
             <div class="container">
-                <h2>История заказов</h2>
-                <p>Все заказы, отсортированные по дате добавления</p>
+                <h2>History of orders</h2>
+                <p>All orders sorted by date of addition</p>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -184,8 +184,8 @@ if (!$is_admin) {
         </div>
         <div class="tab-pane fade" id="waiting-reviews">
             <div class="container">
-                <h2>Отзывы в ожидании</h2>
-                <p>Список отзывов, отсортированных по дате добавления, которые нужно либо одобрить, либо отклонить</p>
+                <h2>Waiting reviews</h2>
+                <p>A list of reviews sorted by date of addition that need to be either approved or rejected</p>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -229,8 +229,8 @@ if (!$is_admin) {
         </div>
         <div class="tab-pane fade" id="active-reviews">
             <div class="container">
-                <h2>Активные отзывы</h2>
-                <p>Отзывы, отсортированные по дате добавления, которые показываются на главной странице</p>
+                <h2>Active reviews</h2>
+                <p>Reviews sorted by date of addition that are shown on the main page</p>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -271,7 +271,7 @@ if (!$is_admin) {
 
         <div class="tab-pane fade" id="phone-requests">
             <div class="container">
-                <h2>Заявки в ожидании</h2>
+                <h2>Waiting requests</h2>
                 <p></p>
                 <table class="table table-striped">
                     <thead>

@@ -5,7 +5,7 @@ if (isset($_SESSION['pizzas'])) {
     if (isset($data['pizzaId'])) {
         array_push($_SESSION['pizzas'], $data['pizzaId']);
     }
-    echo 'success';
+    echo 'The product was successfully added to the cart';
 }
 else {
     echo 'error';

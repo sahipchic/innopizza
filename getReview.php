@@ -8,7 +8,7 @@ if (isset($_POST)) {
 
     $mysqli->query("INSERT INTO `areviews`(`name`, `city`, `review`, `rtime`, `status`) VALUES ('$name', '$city', '$message', NOW(), 'waiting')");
     $id = $mysqli->insert_id;
-    echo 'Ваш отзыв был успешно добавлен на модерацию!';
+    echo 'Your review was successfully added for moderation!';
 }
 else {
     throw new RuntimeException("Only for POST method access!");

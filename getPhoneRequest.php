@@ -8,7 +8,7 @@ if(isset($_POST)){
     $mysqli->query("INSERT INTO `arequests`(`name`, `phone`, `rtime`, `status`) VALUES ('$name', '$phone', NOW(), 'waiting')");
     $id = $mysqli->insert_id;
     if($id > 0){
-        echo "Ваш запрос #$id успешно отправлен! Ожидайте звонка оператора.";
+        echo "Your request #$id was successfully sent! Wait for the operator call.";
     }
     else{
         throw new RuntimeException("Insertion error");
