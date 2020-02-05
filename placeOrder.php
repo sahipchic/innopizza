@@ -103,7 +103,13 @@ function getRowById($id) {
 
                 </div>
 
-                <input type="reset" value="Продолжить оплату" class="btn"
+                <input type="reset" value="Продолжить оплату" <?php
+
+                    if (isset($_SESSION['pizzas'])) {
+                        if(count($_SESSION['pizzas']) == 0) echo 'disabled';
+                    } else echo 'disabled';
+
+                ?> class="btn"
                        onclick="sendCustomerInfo(this.form); clearCart(); window.location.href = 'https://innopizza1.herokuapp.com/index.php';">
             </form>
         </div>
