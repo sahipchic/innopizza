@@ -244,9 +244,9 @@ function getActiveReviews() {
                         <div class=\"card-block\">
                           <h4 class=\"card-title\">$name</h4>
                           <p class=\"card-text p-3\">$desc</p>
-                        <p>Цена: $cost р</p>
-                        <p>Вес: $weight г</p>
-                          <button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Добавить в корзину</button>
+                        <p>Цена: $cost $</p>
+                        <p>Вес: $weight g</p>
+                          <button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>
                           
                         </div>
                         </div>
