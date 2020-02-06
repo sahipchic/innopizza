@@ -21,6 +21,10 @@ Also there are 4 tabs to manage all processes - history of orders,
 active reviews, which are shown on the main page, waiting reviews, 
 which are waiting for moderating by admin, and waiting phone requests.
 
+*Admin login:* admin
+
+*Admin password:* admin
+
 `Link for main` - [Main Page](https://innopizza1.herokuapp.com/)
 
 `Link for placing order` - [Place Order Page](https://innopizza1.herokuapp.com/placeOrder.php)
