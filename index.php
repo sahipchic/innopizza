@@ -168,13 +168,14 @@ function getActiveReviews() {
                         $sum_cost += $cost * $cnt;
                         $out .= "<p class=\"dropdown-item\">$name &nbsp&nbsp<span class=\"badge badge-dark\"> $cnt </span></p>";
                     }
-                    $out .= "<div class=\"dropdown-divider\"></div>";
                     $out .= "<p class=\"dropdown-item\">Total: $sum_cost $</p>";
+                    if(count($pids) > 0) {
+                        $out .= "<div class=\"dropdown-divider\"></div>";
+                        $out .= "<a href='placeOrder.php'><p class=\"dropdown-item\">Place order</p></a>";
+                        $out .= "<a class=\"dropdown-item\" onclick=\"clearCart(); location.reload();\">Clear cart</a>";
+                    }
                     echo $out;
                     ?>
-
-
-                    <a class="dropdown-item" onclick="clearCart();">Clear cart</a>
                 </div>
             </li>
 
