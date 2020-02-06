@@ -51,6 +51,23 @@ function getActiveReviews() {
                 data: JSON.stringify({"pizzaId": pizzaid}),
                 success: function (response) {
                     alert("The item is added to cart!");
+                    document.getElementById("pizza" + pizzaid).innerHTML = "<button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"decrease\");'>-</button><span id='span" + pizzaid + "' style='padding-left: 15px; padding-right: 15px;'>1</span><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"increase\")'>+</button>";
+                },
+                error: function (answer) {
+                    alert(answer.responseText);
+                    document.getElementById("pizza" + pizzaid).innerHTML = "<button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"decrease\");'>-</button><span id='span" + pizzaid + "' style='padding-left: 15px; padding-right: 15px;'>1</span><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"increase\")'>+</button>";
+                }
+            });
+        }
+        function editCount(pizzaid, action){
+            jQuery.ajax({
+                url: 'editCount.php',
+                dataType: 'json',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify({"pizzaId": pizzaid, "action": action}),
+                success: function (response) {
+                    document.getElementById('span' + pizzaid).innerHTML = response;
                 },
                 error: function (answer) {
                     alert(answer.responseText);
@@ -246,8 +263,16 @@ function getActiveReviews() {
                           <p class=\"card-text p-3\">$desc</p>
                         <p>Price: $cost $</p>
                         <p>Weight: $weight g</p>
-                          <button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>
-                          
+                        <div id='pizza$id'>";
+                if(getCountById($id) == 0){
+                    $tmp_out .= "<button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>";
+                }
+                else{
+                    $cnt = getCountById($id);
+                    $tmp_out .= "<button class='btn btn-secondary' onclick='editCount(\"$id\",\"decrease\");'>-</button><span id='span$id' style='padding-left: 15px; padding-right: 15px;'>$cnt</span><button class='btn btn-secondary' onclick='editCount(\"$id\",\"increase\")'>+</button>" ;
+                }
+                $tmp_out .= "
+                        </div>
                         </div>
                         </div>
                         </div>";
