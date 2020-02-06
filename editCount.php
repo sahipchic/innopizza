@@ -23,22 +23,20 @@ if(isset($_SESSION['pizzas'])){
                 exit();
             }
             else{
-
-                $arr = array();
+                $newIds = array();
                 $flag = false;
-                foreach($_SESSION['pizzas'] as $ss){
-                    if($ss === $data['pizzaId'] && $flag === false){
+                foreach($_SESSION['pizzas'] as $pid){
+                    if($pid === $data['pizzaId'] && $flag === false){
                         $flag = true;
                         continue;
                     }
                     else{
-                        $arr[] = $ss;
+                        $newIds[] = $pid;
                     }
                 }
-                $_SESSION['pizzas'] = $arr;
+                $_SESSION['pizzas'] = $newIds;
 
-                $cnt--;
-                echo $cnt;
+                echo --$cnt;
                 exit();
             }
         }
@@ -47,5 +45,5 @@ if(isset($_SESSION['pizzas'])){
     echo 'success';
 }
 else{
-    echo 'error';
+    throw new RuntimeException("No data in session!");
 }
