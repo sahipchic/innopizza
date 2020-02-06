@@ -263,16 +263,8 @@ function getActiveReviews() {
                           <p class=\"card-text p-3\">$desc</p>
                         <p>Price: $cost $</p>
                         <p>Weight: $weight g</p>
-                        <div id='pizza$id'>";
-                if(getCountById($id) == 0){
-                    $tmp_out .= "<button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>";
-                }
-                else{
-                    $cnt = getCountById($id);
-                    $tmp_out .= "<button class='btn btn-secondary' onclick='editCount(\"$id\",\"decrease\");'>-</button><span id='span$id' style='padding-left: 15px; padding-right: 15px;'>$cnt</span><button class='btn btn-secondary' onclick='editCount(\"$id\",\"increase\")'>+</button>" ;
-                }
-                $tmp_out .= "
-                        </div>
+                          <button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>
+                          
                         </div>
                         </div>
                         </div>";
