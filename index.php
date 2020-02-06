@@ -6,6 +6,15 @@ if (!isset($_SESSION['pizzas'])) {
 
 require_once 'bd.php';
 
+function getCountById($id){
+    $tmp = $_SESSION['pizzas'];
+    $cnt = 0;
+    foreach ($tmp as $i){
+        if($i == $id) $cnt++;
+    }
+    return $cnt;
+}
+
 function getRowById($id) {
     global $mysqli;
     $row = mysqli_fetch_row($mysqli->query("select * from apizzas where pid='$id' limit 1"));
@@ -263,8 +272,17 @@ function getActiveReviews() {
                           <p class=\"card-text p-3\">$desc</p>
                         <p>Price: $cost $</p>
                         <p>Weight: $weight g</p>
-                          <button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>
-                          
+                        <div id='pizza$id'>";
+                        //  <button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>
+                        if(getCountById($id) == 0){
+                            $tmp_out .= "<button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Добавить в корзину</button>";
+                        }
+                        else{
+                            $cnt = getCountById($id);
+                            $tmp_out .= "<button class='btn btn-secondary' onclick='editCount(\"$id\",\"decrease\");'>-</button><span id='span$id' style='padding-left: 15px; padding-right: 15px;'>$cnt</span><button class='btn btn-secondary' onclick='editCount(\"$id\",\"increase\")'>+</button>" ;
+                        }
+                $tmp_out .= "
+                        </div>
                         </div>
                         </div>
                         </div>";
