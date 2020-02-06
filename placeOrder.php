@@ -111,7 +111,7 @@ function getRowById($id) {
                        onclick="sendCustomerInfo(this.form);" <?php
 
                 if (isset($_SESSION['pizzas'])) {
-                    if(count($_SESSION['pizzas']) == 0) echo 'disabled';
+                    if(count($_SESSION['pizzas']) == 0) echo ' disabled';
                 } else echo 'disabled';
 
                 ?>>
