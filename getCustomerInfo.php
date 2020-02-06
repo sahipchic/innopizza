@@ -38,6 +38,7 @@ if(isset($_POST)){
 
     $id = $mysqli->insert_id;
     if($id > 0){
+        $_SESSION['pizzas'] = array();
         echo "success";
     }
     else{
