@@ -107,7 +107,7 @@ function getRowById($id) {
 
                 </div>
 
-                <input type="button" value="Checkout payment" class="btn<?php
+                <input type="button" value="Checkout payment" class="btn btn-success<?php
 
                 if (isset($_SESSION['pizzas'])) {
                     if(count($_SESSION['pizzas']) == 0) echo ' disabled';
