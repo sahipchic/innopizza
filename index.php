@@ -140,9 +140,6 @@ function getActiveReviews() {
             <li class="nav-item mr-3 ">
                 <a class="nav-link" href="#reviews">REVIEWS</a>
             </li>
-            <li class="nav-item mr-3 ">
-                <a id="form_order" class="nav-link" href="placeOrder.php">PLACE ORDER</a>
-            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" onclick="refreshOrder();" id="navbarDropdown" role="button"
                    data-toggle="dropdown"
