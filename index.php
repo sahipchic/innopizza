@@ -263,7 +263,7 @@ function getActiveReviews() {
                     $tmp_out .= "<div class=\"row\">";
                 }
                 $tmp_out .= "<div class=\"col-xs-12 col-sm-12 col-md-6 col-lg-4\">
-                        <div class=\"card m-4\" style='height: 300px;'>
+                        <div class=\"card m-4\" style='height: 400px;'>
                         <img class=\"card-img-top mb-3\" src=\"img/$img_link\" alt=\"Card image\">
                         <div class=\"card-block\">
                           <h4 class=\"card-title\">$name</h4>
