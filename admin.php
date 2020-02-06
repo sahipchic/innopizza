@@ -146,7 +146,7 @@ if (!$is_admin) {
                         <th>Phone</th>
                         <th>Address</th>
                         <th>City</th>
-                        <th>Comment</th>
+                        <th>Items</th>
                         <th>Time</th>
                         <th>Status</th>
                     </tr>
@@ -161,7 +161,7 @@ if (!$is_admin) {
                         $phone = $row['phone'];
                         $address = $row['address'];
                         $city = $row['city'];
-                        $comment = $row['comment'];
+                        $items = $row['items_list'];
                         $time = $row['order_time'];
                         $status = $row['status'];
                         $out .= "<tr>
@@ -169,7 +169,7 @@ if (!$is_admin) {
                             <td>$phone</td>
                             <td>$address</td>
                             <td>$city</td>
-                            <td>$comment</td>
+                            <td>$items</td>
                             <td>$time</td>
                             <td>$status</td>
                         </tr>";
