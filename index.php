@@ -273,9 +273,9 @@ function getActiveReviews() {
                         <p>Price: $cost $</p>
                         <p>Weight: $weight g</p>
                         <div id='pizza$id'>";
-                        //  <button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>
+
                         if(getCountById($id) == 0){
-                            $tmp_out .= "<button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Добавить в корзину</button>";
+                            $tmp_out .= "<button type='button' style=\"margin-bottom: 10px;\" class=\"btn btn-info mb-3\" onclick=\"addToCart('$id');\" >Add to cart</button>";
                         }
                         else{
                             $cnt = getCountById($id);
