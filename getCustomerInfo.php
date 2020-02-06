@@ -34,7 +34,7 @@ if(isset($_POST)){
     }
 
     $mysqli->query("INSERT INTO `aorders`(`name`, `phone`, `address`, `city`, `comment`, `items_list`, `cardname`, `cardnumber`, `expmonth`, `expyear`, `cvv`, `order_time`, `status`) 
-    VALUES ('$name', '$phone', '$address', '$city', '$comment', '$out','$cardname', '$cardnumber', '$expmonth', '$expyear', '$cvv', NOW(), 'waiting')");
+    VALUES ('$name', '$phone', '$address', '$city', '$comment', '$out','$cardname', '$cardnumber', '$expmonth', '$expyear', '$cvv', NOW(), 'processing')");
 
     $id = $mysqli->insert_id;
     if($id > 0){
