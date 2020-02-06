@@ -302,7 +302,7 @@ function getActiveReviews() {
         <div class="customer-reviews pb-4">
             <h2>What do our customers say about InnoPizza?</h2>
         </div>
-        <div class="carousel slide" data-ride="carousel" id="review-carousel" data-interval="4000">
+        <div style="height: 170px;" class="carousel slide" data-ride="carousel" id="review-carousel" data-interval="4000">
             <div class="carousel-inner review-inner" role="listbox">
                 <?
                 $out = "";
@@ -318,7 +318,7 @@ function getActiveReviews() {
                     else {
                         $out .= "<div class=\"carousel-item\">";
                     }
-                    $out .= "<h3>Name: $name</h3>
+                    $out .= "<h3>$name</h3>
                     <p><em>$review</em></p>
                     <p><strong>City: $city</strong></p>
                             </div>";
