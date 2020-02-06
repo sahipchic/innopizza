@@ -107,14 +107,14 @@ function getRowById($id) {
 
                 </div>
 
-                <input type="button" value="Checkout payment" class="btn btn-success<?php
+                <input type="button" value="Checkout payment" class="btn"
+                       onclick="sendCustomerInfo(this.form);" <?php
 
                 if (isset($_SESSION['pizzas'])) {
-                    if(count($_SESSION['pizzas']) == 0) echo ' disabled';
-                } else echo ' disabled';
+                    if(count($_SESSION['pizzas']) == 0) echo 'disabled style="background-color: grey;"';
+                } else echo 'disabled style="background-color: grey;"';
 
-                ?>"
-                       onclick="sendCustomerInfo(this.form);" >
+                ?>>
             </form>
         </div>
     </div>
