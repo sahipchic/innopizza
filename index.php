@@ -60,11 +60,10 @@ function getActiveReviews() {
                 data: JSON.stringify({"pizzaId": pizzaid}),
                 success: function (response) {
                     alert("The item is added to cart!");
-                    document.getElementById("pizza" + pizzaid).innerHTML = "<button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"decrease\");'>-</button><span id='span" + pizzaid + "' style='padding-left: 15px; padding-right: 15px;'>1</span><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"increase\")'>+</button>";
+                    document.getElementById("pizza" + pizzaid).innerHTML = "<div style='margin-bottom: 15px;'><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"decrease\");'>-</button><span id='span" + pizzaid + "' style='padding-left: 15px; padding-right: 15px;'>1</span><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"increase\")'>+</button></div>";
                 },
                 error: function (answer) {
                     alert(answer.responseText);
-                    document.getElementById("pizza" + pizzaid).innerHTML = "<button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"decrease\");'>-</button><span id='span" + pizzaid + "' style='padding-left: 15px; padding-right: 15px;'>1</span><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"increase\")'>+</button>";
                 }
             });
         }
@@ -279,7 +278,7 @@ function getActiveReviews() {
                         }
                         else{
                             $cnt = getCountById($id);
-                            $tmp_out .= "<button class='btn btn-secondary' onclick='editCount(\"$id\",\"decrease\");'>-</button><span id='span$id' style='padding-left: 15px; padding-right: 15px;'>$cnt</span><button class='btn btn-secondary' onclick='editCount(\"$id\",\"increase\")'>+</button>" ;
+                            $tmp_out .= "<div style='margin-bottom: 15px;'><button class='btn btn-secondary' onclick='editCount(\"$id\",\"decrease\");'>-</button><span id='span$id' style='padding-left: 15px; padding-right: 15px;'>$cnt</span><button class='btn btn-secondary' onclick='editCount(\"$id\",\"increase\")'>+</button></div>" ;
                         }
                 $tmp_out .= "
                         </div>
