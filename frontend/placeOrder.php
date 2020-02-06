@@ -16,7 +16,7 @@ function getRowById($id) {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/placeOrderStyle.css">
+    <link rel="stylesheet" href="../css/placeOrderStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>
         Оформление заказа
@@ -30,7 +30,7 @@ function getRowById($id) {
                 if (data === 'success'){
                     alert("Your order has been successfully paid for! Our courier will contact you at the specified phone number when he arrives. Expect and Bon appetit!");
                     clearCart();
-                    window.location.href = 'https://innopizza1.herokuapp.com/index.php';
+                    window.location.href = 'index.php';
                 }
                 else{
                     alert("Enter all required data, please!");
@@ -63,7 +63,7 @@ function getRowById($id) {
 <div class="row">
     <div class="col-75">
         <div class="container">
-            <form action="getCustomerInfo.php" method="post">
+            <form action="../backend/getCustomerInfo.php" method="post">
                 <div class="row">
                     <div class="col-50">
                         <h3>Billing address</h3>

@@ -123,7 +123,7 @@ function getActiveReviews() {
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light fixed-top">
-    <a href="#" class="navbar-brand"><img src="img/logo1.png" alt="logo" style="width: 30%; margin-left: 50px;"
+    <a href="#" class="navbar-brand"><img src="../img/logo1.png" alt="logo" style="width: 30%; margin-left: 50px;"
                                           class="img-responsive"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-Menu"
             aria-controls="navbar-Menu" expanded="false" aria-label="Toggle navigation">
@@ -166,7 +166,7 @@ function getActiveReviews() {
                     $out .= "<p class=\"dropdown-item\">Total: $sum_cost $</p>";
                     $out .= "<div class=\"dropdown-divider\"></div>";
                     if(count($pids) > 0) {
-                        $out .= "<a href='placeOrder.php'><p class=\"dropdown-item\">Place order</p></a>";
+                        $out .= ">Place order</p></a>";
                     }
                     $out .= "<a class=\"dropdown-item\" onclick=\"clearCart(); location.reload();\">Clear cart</a>";
                     echo $out;
@@ -185,7 +185,7 @@ function getActiveReviews() {
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img height="800" class="d-block w-100" src="img/pizza.jpg" alt="Первый слайд">
+                <img height="800" class="d-block w-100" src="../img/pizza.jpg" alt="Первый слайд">
                 <div style="margin-bottom: 250px;  opacity: 0.9; background: #000; border-radius: 20px;"
                      class="carousel-caption d-none d-md-block">
                     <h1>Welcome to InnoPizza!</h1>
@@ -195,7 +195,7 @@ function getActiveReviews() {
                 </div>
             </div>
             <div class="carousel-item">
-                <img height="800" class="d-block w-100" src="img/pizza2.jpg" alt="Второй слайд">
+                <img height="800" class="d-block w-100" src="../img/pizza2.jpg" alt="Второй слайд">
                 <div align="left"
                      style="margin: 100px 200px 200px;padding-right: 20px; padding-left: 20px; opacity: 0.8; background: #000; border-radius: 20px;"
                      class="carousel-caption d-none d-md-block">
@@ -203,7 +203,7 @@ function getActiveReviews() {
                         Leave your request and our operator will contact you within a few minutes
                     </h3>
                     <br><br>
-                    <form method="post" action="getPhoneRequest.php">
+                    <form method="post" action="../backend/getPhoneRequest.php">
                         <div class="form-group row">
                             <label for="name" class="col-sm-2 col-form-label">Name</label>
                             <div class="col">
@@ -347,7 +347,7 @@ function getActiveReviews() {
                 <h3><font color="#fc0808">Only you make us better ♥♥♥️</font></h3>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <form class="" action="getReview.php" method="post">
+                <form class="" action="../backend/getReview.php" method="post">
                     <div class="form-group">
                         <label for="Form-Control-Name"><h5>Name</h5></label>
                         <input name="name" type="text" class="form-control" id="Form-Control-Name" placeholder="Name" required="true">
