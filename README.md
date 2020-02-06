@@ -51,7 +51,7 @@ Also there are 2 buttons - `update` the page and `exit` back to the login form.
 
 Main Page:
  1) It has a `shopping cart` that displays all selected pizzas with a further possible transition to ordering for them.
-2) `Place order` button is responsible for moving to checkout your current order.
+2) `Place order` button (situated inside the cart) is responsible for moving to checkout your current order.
 3) `Request form` for a phone call from the operator is located on the second slide of the carousel under the header.
 4) `Menu` has 9 different cards with pizzas with their own photo, description and `Add to Cart` button.
 5) `Reviews` is a carousel in which all active reviews from users are rotated.
