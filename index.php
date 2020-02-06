@@ -59,9 +59,11 @@ function getActiveReviews() {
                 contentType: 'application/json',
                 data: JSON.stringify({"pizzaId": pizzaid}),
                 success: function (response) {
+                    alert("The item is added to cart!");
                     document.getElementById("pizza" + pizzaid).innerHTML = "<div style='margin-bottom: 15px;'><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"decrease\");'>-</button><span id='span" + pizzaid + "' style='padding-left: 15px; padding-right: 15px;'>1</span><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"increase\")'>+</button></div>";
                 },
                 error: function (answer) {
+                    alert(answer.responseText);
                     document.getElementById("pizza" + pizzaid).innerHTML = "<div style='margin-bottom: 15px;'><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"decrease\");'>-</button><span id='span" + pizzaid + "' style='padding-left: 15px; padding-right: 15px;'>1</span><button class='btn btn-secondary' onclick='editCount(\""+pizzaid+"\",\"increase\")'>+</button></div>";
                 }
             });
