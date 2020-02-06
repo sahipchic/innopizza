@@ -23,11 +23,11 @@ if(isset($_SESSION['pizzas'])){
         $out .= "<p class=\"dropdown-item\">$name &nbsp&nbsp<span class=\"badge badge-dark\"> $cnt</span></p>";
     }
     $out .= "<p class=\"dropdown-item\">Total: $sum_cost $</p>";
+    $out .= "<div class=\"dropdown-divider\"></div>";
     if(count($pids) > 0) {
-        $out .= "<div class=\"dropdown-divider\"></div>";
         $out .= "<a href='placeOrder.php'><p class=\"dropdown-item\">Place order</p></a>";
-        $out .= "<a class=\"dropdown-item\" onclick=\"clearCart(); location.reload();\">Clear cart</a>";
     }
+    $out .= "<a class=\"dropdown-item\" onclick=\"clearCart(); location.reload();\">Clear cart</a>";
     echo $out;
 }
 else{
